@@ -1,0 +1,30 @@
+{
+	"env": {
+		"es6": true,
+		"node": true,
+		"browser": true
+	},
+	"extends": ["eslint:recommended", "plugin:react/recommended"],
+	"plugins": ["react"],
+
+	"globals": {
+		"Atomics": "readonly",
+		"SharedArrayBuffer": "readonly"
+	},
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2020,
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"rules": {
+		"indent": ["error", "tab", { "SwitchCase": 1 }],
+		"no-tabs": ["error", { "allowIndentationTabs": true }],
+		"object-curly-spacing": [2, "always"],
+		"linebreak-style": 0,
+		"max-len": "off",
+		"space-before-function-paren": ["error", "always"],
+		"comma-dangle": [2, "only-multiline"]
+	}
+}
