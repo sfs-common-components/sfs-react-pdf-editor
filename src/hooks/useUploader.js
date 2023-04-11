@@ -68,7 +68,6 @@ export const useUploader = ({ use, afterUploadPdf, afterUploadAttachment }) => {
     }
   };
   const upload = async (event) => {
-    debugger;
     if (!isUploading) {
       return;
     }

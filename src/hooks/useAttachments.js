@@ -45,7 +45,6 @@ const reducer = (state, action) => {
       };
     }
     case ActionType.UPDATE_ATTACHMENT: {
-      debugger;
       if (pageIndex === -1) {
         return state;
       }
@@ -66,7 +65,6 @@ const reducer = (state, action) => {
       };
     }
     case ActionType.UPDATE_PAGE_INDEX: {
-      debugger;
       return {
         ...state,
         pageIndex: action.pageIndex,
