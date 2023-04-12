@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>HTML 5 Boilerplate</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<h1>PDF.js Previous/Next example</h1>
+
+		<div>
+			<button id="prev">Previous</button>
+			<button id="next">Next</button>
+			&nbsp; &nbsp;
+			<span>Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+		</div>
+
+		<canvas id="the-canvas"></canvas>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.5.141/pdf.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.5.141/pdf.worker.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>

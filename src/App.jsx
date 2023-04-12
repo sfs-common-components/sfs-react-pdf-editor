@@ -121,15 +121,26 @@ const App = () => {
 				<Empty loading={isUploading} uploadPdf={handlePdfClick} />
 			) : (
 				<Grid container justify="space-around">
-					<Grid item>
-						<Button>Text Field</Button>
-					</Grid>
+					<Grid item>{isMultiPage && !isFirstPage && <Button onClick={previousPage}>Pervious </Button>}</Grid>
 					<Grid item xs={8}>
-						<iframe
+						<div style={{ position: 'relative' }}>
+							<Page dimensions={dimensions} updateDimensions={setDimensions} page={currentPage} />
+							{dimensions && (
+								<Attachments
+									pdfName={name}
+									removeAttachment={remove}
+									updateAttachment={update}
+									pageDimensions={dimensions}
+									attachments={pageAttachments}
+								/>
+							)}
+						</div>
+						{/* <iframe
 							width={'100%'}
 							style={{ height: '100vh' }}
-							src="https://sfs-api-framework-upload-qa.s3.ca-central-1.amazonaws.com/pdfserver/1681125841844.html"></iframe>
+							src="https://sfs-api-framework-upload-qa.s3.ca-central-1.amazonaws.com/pdfserver/1681125841844.html"></iframe> */}
 					</Grid>
+					<Grid item>{isMultiPage && !isLastPage && <Button onClick={nextPage}>Next </Button>}</Grid>
 				</Grid>
 			)}
 			{/* <DrawingModal open={drawingModalOpen} dismiss={() => setDrawingModalOpen(false)} confirm={addDrawing} />

@@ -8,7 +8,7 @@ export const Page = ({ page, dimensions, updateDimensions }) => {
 			const _page = await p;
 			if (_page) {
 				const context = canvasRef.current?.getContext('2d');
-				const viewport = _page.getViewport({ scale: 1 });
+				const viewport = _page.getViewport({ scale: 4 });
 				setWidth(viewport.width);
 				setHeight(viewport.height);
 				if (context) {
